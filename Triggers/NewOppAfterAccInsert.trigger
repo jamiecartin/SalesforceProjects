@@ -5,7 +5,7 @@ trigger NewOppAfterAccInsert on Account (after insert) {
     opp.Name = 'New Opportunity';
     opp.StageName = 'Prospecting';
     opp.CloseDate = Date.today).addDays(30);
-    opp.Accountld = acc.Id;
+    opp.AccountId = acc.Id;
     opps.add (opp);
    }
   insert opps;
