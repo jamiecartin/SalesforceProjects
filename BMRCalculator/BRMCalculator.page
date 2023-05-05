@@ -1,0 +1,24 @@
+<apex:page controller="BMRCalculator">
+    <apex:form>
+        <apex:pageBlock title="Calculate BMR">
+            <apex:pageBlockSection>
+                <apex:inputField label="Gender" value="{!gender}" />
+                <apex:inputField label="Weight" value="{!weight}" />
+                <apex:inputField label="Height" value="{!height}" />
+                <apex:inputField label="Age" value="{!age}" />
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Calculate BMR" action="{!calculateBMR}" rerender="result" />
+            </apex:pageBlockButtons>
+            
+            <apex:outputPanel id="result">
+                <apex:pageBlockSection rendered="{!showResult}">
+                    <apex:outputText label="BMR" value="{0,number,#.##}">
+                        <apex:param value="{!bmr}" />
+                    </apex:outputText>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
