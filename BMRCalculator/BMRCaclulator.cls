@@ -7,7 +7,7 @@ public class BMRCalculator {
         } else if (gender.equalsIgnoreCase('female')) {
             bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
         }
-        
+    
         return bmr;
     }
 }
