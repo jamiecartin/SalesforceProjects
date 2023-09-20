@@ -46,10 +46,3 @@ public class HealthcareIntegration {
       makeAPIRequest('http://api.thirdpartyapp.com/endpoint', requestBody);
     }
   }
-
-
-
-
-
-
-    
